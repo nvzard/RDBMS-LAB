@@ -1,0 +1,73 @@
+Aim: SQL OVERVIEW/INTRODUCTION
+
+DDL :- Data Definition Language(Used to define the database)(Changes the schema)
+        Eg: CREATE, ALTER, DROP
+
+DML :- Data Manipulation Language
+		Eg: INSERT INTO, DELETE, UPDATE
+
+DCL :- Data Control Language
+		Eg: GRANT: Give priv to user
+			REVOKE: Take back priv granted from the user
+
+DQL :- Data Query Language
+		Eg: SELECT, DESC, GROUP BY, HAVING, ORDER BY
+		Eg: SELECT * FROM [TABLE_NAME] WHERE [CONDITION]
+
+
+SQL CONSTANT :- 
+	KEY: Key is an attribute or group of attributes which can uniquely identify a tuple. 
+
+for Relational DBMS:- No two tuples in a relation should be same. OR There should be a set
+						of attributes in relation R such that all tuples of R can be differentiated with the help of that attribute.
+
+Simple Key:- Key with single attribute.
+Compound Key:- Key with two or more attrubutes.
+
+Prime/Key attribute:-	Set of attribute that belongs to any key.
+
+Non Prime/Key Attribute:- Set of attrubutes not belonging to any key.
+
+Super Key:- Set of attributes used to differentiate tuple of the relation
+
+Key- Minimum no of attributes used to differentiate all the tuples of the relation.(non null 		 tuples)
+Candidate Key:- The minimal super key is known as candidate key
+
+Primary Key;- 1.) Atmost '1' primary key per table.
+			  2.) Not NULL
+			  3.) Const - 'PRIMARY KEY'
+
+Secondary/Alternate Key:- 1.) More than '1' alternate key is possible
+						  2.) It can be null, but primary key banana hee padega.
+						  3.) Const - 'UNIQUE'	
+
+NULL:- 		1.)	No two NULL values are equal.
+	   		2.)	All NULL are non zero.
+	   		3.)	DBMS assign random ASCII value to every NULL such that no two NULLs are equal.
+
+TYPES OF NULL:- 1.) Unknown:- DOB
+	   			2.) Unexisting:- FAX_NO
+
+CONSTANTS:- Rules enforced on the data column on the table. They are used to limit the type of
+			data that can go   			This ensure the accuracy and reliability of the data.
+
+			TYPES:-
+					1.) Column Level:- Applied to column
+					2.) Table Level :- Applied to whole table
+
+			Eg:- 1.) NOT NULL:- Ensures column has no NULL values
+				 2.) DEFAULT:- It specifies a default value for column where none is specified.
+				 3.) UNIQUE:- It ensures that all value in the column are different.
+				 4.) PRIMARY KEY:- Uniquely identify each row in a column.
+				 5.) FOREIGN KEY:- Uniquely identify a row record in another database table.
+				 6.) CHECK:- It ensure certain checks, like range of a value
+				 7.) INDEX:- Used to create and retrieve data very quickly.
+
+
+SQL DATA TYPES:- 
+
+
+SQL OPERATORS:- 
+				1.) ARITHMATIC OPERATORS
+				2.) COMPARISION OPERATOR
+				3.) LOGICAL OPERATORS:- OR, AND, NOT, ANY, BETWEEN, EXISTS, IN, IS NULL, UNIQUE
