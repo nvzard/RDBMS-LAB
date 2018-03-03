@@ -1,0 +1,122 @@
+
+
+## AGGREGATE FUNCTIONS
+
+Count(attribute_name)
+Sum(attribute_name)
+Average(attribute_name)
+Max(attribute_name)
+
+Aggregate function always discards null value
+
+Average(mark) = Sum(marks)/Count(marks)
+
+Average Distinct(marks) = Sum Distict(marks) / Count Distinct(Marks)
+
+Arithmatic operation NULL, result is NULL
+
+NULL + S = NULL
+
+
+GROUP BY:
+    It groups the table based on the specified attribute
+
+
+UPDATE R SET marks=marks+5
+SELECT AVERAGE(marks) from R
+
+HAVING:
+    Used to select the group those which satisfy the condition
+
+    Condition is for each group
+    
+    
+
+Whenever group by exists then aggregations(min marks) done for each
+group
+
+SELECT AVG(MIN(marks)) FROM student GROUP BY branch;
+
+If aggregation operator and other used operator in select clause
+
+SELECT BRANCH, MIN(marks) FROM student;
+(Such syntax not allowed in sql language)
+
+IF aggregate operator is used in select clause, is allowed if other attribute in group by clause.
+
+SELECT MIN(a,b) FROM R GROUP BY c
+
+Ques. RETRIVE SID and MARKS of students who secured highest marks
+
+SELECT sid, marks FROM students group by sid having MAX(marks)
+
+select sid, marks from student where marks=(select max(marks) from student);
+
+
+
+% --> zero or any no. of characters
+_ --> Exacty one character
+
+Q. find student name whose name start with D and end with A and atlest 5 char
+
+SELECT name from student where name like D_ _ _%A
+
+Q. find the name of name of student 
+
+
+SELECT name from student where name not like A%
+
+
+
+
+Queries
+
+1. Retrive the bday and address of the employee whose name is
+    'John D Smith'
+
+2. For every project located in 'Stanford' least the project number, the 
+    controlling department number and the department manager last name, 
+    address and bdate. 
+
+3. Find all employees whose range in salary (30,000 - 40,000)
+
+4. Find all employee whose department is either 5 or 1.
+
+5. Find the employee with max salary.
+
+6. Find the name of the project at location 'Bellair', 'Houston', 'Stanford',
+    'SugarLand' in above sequence
+
+7. Find all employees under same supervision.
+
+8. FInd avg salary of employee according to their department.
+
+    SELECT department, avg(salary) from employee GROUP BY department;
+
+9. Make a list of all prject no from project that involve a employee
+    whose last name is 'Smith' either as a worker or as a manager of the 
+    dependent that controls the project.
+
+10. Retrive all employee whose address is in 'Houston ,TX '
+
+11. Find all employee who were born during the 1950s
+
+12. Show the resultant salary if every employee working on product X
+    project is given a 10% raise.
+
+13. Select all employee in department 5 whose salary is in between
+    30000 and 40,0000
+
+14. Retrive the name of all employee who do not have supervision
+
+        WHERE super_ssn IS NULL
+
+15. Retrive a list of employees and the project they are work on, ORDER BY
+    DEPARTMENT and with each department order by alphable fname and lname.
+
+
+
+
+
+
+
